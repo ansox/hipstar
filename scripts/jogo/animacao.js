@@ -1,4 +1,4 @@
-class Animacao {
+export default class Animacao {
   constructor(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite, velocidadeMaxima) {
     this.matriz = matriz;
     this.imagem = imagem;

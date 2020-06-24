@@ -1,4 +1,8 @@
-let imagemCenario;
+import Cenario from './scripts/jogo/cenario.js';
+import Pontuacao from './scripts/jogo/pontuacao.js';
+import Personagem from './scripts/jogo/personagem.js';
+import Inimigo from './scripts/jogo/inimigo.js';
+
 let imagemPersonagem;
 let imagemInimigo;
 let imagemTroll;
@@ -124,7 +128,6 @@ const matrizInimigoVoador = [
 const inimigos = [];
 
 function preload() {
-  imagemCenario = loadImage('./imgs/floresta.png');
   imagemPersonagem = loadImage('./imgs/correndo.png');
   imagemInimigo = loadImage('./imgs/inimigos/gotinha.png');
   imagemTroll = loadImage('./imgs/inimigos/troll.png');
@@ -198,3 +201,8 @@ function draw() {
   pontuacao.adicionarPontos();
   pontuacao.exibe();
 }
+
+window.setup = setup;
+window.draw = draw;
+window.preload = preload;
+window.keyPressed = keyPressed;

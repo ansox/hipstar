@@ -1,4 +1,6 @@
-class Inimigo extends Animacao {
+import Animacao from './animacao.js';
+
+export default class Inimigo extends Animacao {
   constructor(matriz, imagem, x, variacaoY, largura, altura, larguraSprite,
     alturaSprite, velocidadeMaxima, delay) {
     super(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite, velocidadeMaxima);

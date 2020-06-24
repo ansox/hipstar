@@ -1,4 +1,6 @@
-class Personagem extends Animacao {
+import Animacao from './animacao.js';
+
+export default class Personagem extends Animacao {
 
   constructor(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite, velocidadeMaxima) {
     super(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite, velocidadeMaxima);
