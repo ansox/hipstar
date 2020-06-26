@@ -2,18 +2,18 @@ import Animacao from './animacao.js';
 
 export default class Inimigo extends Animacao {
   constructor(matriz, imagem, x, variacaoY, largura, altura, larguraSprite,
-    alturaSprite, velocidadeMaxima, delay) {
+    alturaSprite, velocidadeMaxima) {
     super(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite, velocidadeMaxima);
     this.y = height - altura - variacaoY;
-    this.delay = delay;
-    this.x = width + this.delay;
+    this.x = width;
+    this.velocidade = 0;
   }
 
   move() {
-    this.x = this.x - 5;
+    this.x = this.x - this.velocidade;
+  }
 
-    if (this.x < -this.largura - this.delay) {
-      this.x = width;
-    }
+  aparece() {
+    this.x = width;
   }
 }
